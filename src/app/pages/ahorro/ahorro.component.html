@@ -1,0 +1,279 @@
+<br>
+<br>
+
+<div class="d-flex justify-content-center">
+    <button class="btn  btn-lg" [class.btn-primary-smart]="tab=='dia'" (click)="tab ='dia'" style="width:250px" [class.btn-outline-primary-smart]="tab != 'dia'">Día </button>
+    <button class="btn  btn-lg" [class.btn-primary-smart]="tab=='mes'" (click)="tab ='mes'" style="width:250px" [class.btn-outline-primary-smart]="tab !='mes'">Mes</button>
+    <button class="btn  btn-lg" [class.btn-primary-smart]="tab=='año'" (click)="tab ='año'" style="width:250px" [class.btn-outline-primary-smart]="tab !='año'">Año</button>
+</div>
+<br>
+<br>
+<br>
+<div [ngSwitch]="tab">
+    <div *ngSwitchCase="'dia'">
+        <div class="d-flex justify-content-center">
+            <div class="">
+                <div>
+                    <ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next" [displayMonths]="2"></ngb-datepicker>
+                </div>
+                <div style="padding-top: 10px;">
+                    <h4> Día: {{model.day}}/{{model.month}}/{{model.year}}</h4>
+                </div>
+            </div>
+            <div style="padding-left: 25px;">
+                <div class="table-responsive-md">
+                    <table class="table table-borderless table-smarten">
+                        <thead>
+                            <tr>
+                                <th scope="col">kWh</th>
+                                <th></th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">
+                                    <h5 class="ahorro">2532 kW</h5>
+                                </td>
+                                <td>
+                                    <h5>Usted ha ahorrado 2532 kW</h5>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">
+                                    <h5 class="consumo">3541 kW</h5>
+                                </td>
+                                <td>
+                                    <h5>Usted ha consumido 3541 kW</h5>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">
+                                    <h5 class="">1009 kWh</h5>
+                                </td>
+                                <td>
+                                    <h5>Su consumo real a pagar hubiese sido 1009 kW</h5>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <table class="table table-borderless table-smarten">
+                        <thead>
+                            <tr>
+                                <th scope="col">Pesos</th>
+                                <th></th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">
+                                    <h5 class="ahorro">{{'2532' |currency:'MXN'}}</h5>
+                                </td>
+                                <td>
+                                    <h5>Usted ha ahorrado{{'2532' |currency:'MXN'}}</h5>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">
+                                    <h5 class="consumo">{{'3541' |currency:'MXN'}}</h5>
+                                </td>
+                                <td>
+                                    <h5>Usted ha consumido {{'3541' |currency:'MXN'}}</h5>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">
+                                    <h5 class="">{{'1009' |currency:'MXN'}}</h5>
+                                </td>
+                                <td>
+                                    <h5>Su consumo real a pagar hubiese sido {{'1009' |currency:'MXN'}}</h5>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div *ngSwitchCase="'mes'">
+        <div class="d-flex justify-content-center">
+            <div class="">
+                <div>
+                    <ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next" [displayMonths]="2"></ngb-datepicker>
+                </div>
+                <div style="padding-top: 10px;">
+                    <h4> Mes:{{model.month}}/{{model.year}}</h4>
+                </div>
+            </div>
+            <div style="padding-left: 25px;">
+                <div class="table-responsive-md">
+                    <table class="table table-borderless table-smarten">
+                        <thead>
+                            <tr>
+                                <th scope="col">kWh</th>
+                                <th></th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">
+                                    <h5 class="ahorro">2532 kW</h5>
+                                </td>
+                                <td>
+                                    <h5>Usted ha ahorrado 2532 kW</h5>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">
+                                    <h5 class="consumo">3541 kW</h5>
+                                </td>
+                                <td>
+                                    <h5>Usted ha consumido 3541 kW</h5>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">
+                                    <h5 class="">1009 kWh</h5>
+                                </td>
+                                <td>
+                                    <h5>Su consumo real a pagar hubiese sido 1009 kW</h5>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <table class="table table-borderless table-smarten">
+                        <thead>
+                            <tr>
+                                <th scope="col">Pesos</th>
+                                <th></th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">
+                                    <h5 class="ahorro">{{'2532' |currency:'MXN'}}</h5>
+                                </td>
+                                <td>
+                                    <h5>Usted ha ahorrado{{'2532' |currency:'MXN'}}</h5>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">
+                                    <h5 class="consumo">{{'3541' |currency:'MXN'}}</h5>
+                                </td>
+                                <td>
+                                    <h5>Usted ha consumido {{'3541' |currency:'MXN'}}</h5>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">
+                                    <h5 class="">{{'1009' |currency:'MXN'}}</h5>
+                                </td>
+                                <td>
+                                    <h5>Su consumo real a pagar hubiese sido {{'1009' |currency:'MXN'}}</h5>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div *ngSwitchCase="'año'">
+        <div class="d-flex justify-content-center">
+            <div class="">
+                <div>
+                    <ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next" [displayMonths]="2"></ngb-datepicker>
+                </div>
+                <div style="padding-top: 10px;">
+                    <h4> Año: {{model.year}}</h4>
+                </div>
+            </div>
+            <div style="padding-left: 25px;">
+                <div class="table-responsive-md">
+                    <table class="table table-borderless table-smarten">
+                        <thead>
+                            <tr>
+                                <th scope="col">kWh</th>
+                                <th></th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">
+                                    <h5 class="ahorro">2532 kW</h5>
+                                </td>
+                                <td>
+                                    <h5>Usted ha ahorrado 2532 kW</h5>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">
+                                    <h5 class="consumo">3541 kW</h5>
+                                </td>
+                                <td>
+                                    <h5>Usted ha consumido 3541 kW</h5>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">
+                                    <h5 class="">1009 kWh</h5>
+                                </td>
+                                <td>
+                                    <h5>Su consumo real a pagar hubiese sido 1009 kW</h5>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <table class="table table-borderless table-smarten">
+                        <thead>
+                            <tr>
+                                <th scope="col">Pesos</th>
+                                <th></th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">
+                                    <h5 class="ahorro">{{'2532' |currency:'MXN'}}</h5>
+                                </td>
+                                <td>
+                                    <h5>Usted ha ahorrado{{'2532' |currency:'MXN'}}</h5>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">
+                                    <h5 class="consumo">{{'3541' |currency:'MXN'}}</h5>
+                                </td>
+                                <td>
+                                    <h5>Usted ha consumido {{'3541' |currency:'MXN'}}</h5>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">
+                                    <h5 class="">{{'1009' |currency:'MXN'}}</h5>
+                                </td>
+                                <td>
+                                    <h5>Su consumo real a pagar hubiese sido {{'1009' |currency:'MXN'}}</h5>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{{model |json}}

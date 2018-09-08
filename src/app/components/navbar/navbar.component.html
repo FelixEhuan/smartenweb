@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg ">
+    <a class="navbar-brand" routerLinkActive="active" [routerLink]="['Inicio']"> <img src="../assets/panel.png" alt="" height="50"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li routerLinkActive="active" class="nav-item">
+                <a class="nav-link" [routerLink]="['Inicio']">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li routerLinkActive="active" class="nav-item">
+                <a class="nav-link" [routerLink]="['Consumo']">Consumo <span class="sr-only">(current)</span></a>
+            </li>
+            <li routerLinkActive="active" class="nav-item">
+                <a class="nav-link" [routerLink]="['Generado']">Generado</a>
+            </li>
+            <li routerLinkActive="active" class="nav-item">
+                <a class="nav-link" [routerLink]="['Ahorro']">Ahorro</a>
+            </li>
+            <li routerLinkActive="active" class="nav-item">
+                <a class="nav-link" [routerLink]="['Graficas']">Gráficas</a>
+            </li>
+            <li routerLinkActive="active" class="nav-item">
+                <a class="nav-link" [routerLink]="['Soporte']">Soporte</a>
+            </li>
+        </ul>
+        <div class="ml-auto">
+            <a href="" class="btn btn-success">Inicia Sesión</a>
+        </div>
+    </div>
+</nav>

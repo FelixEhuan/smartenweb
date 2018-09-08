@@ -1,0 +1,42 @@
+@import '../../../styles.scss';
+div,
+img {
+    // display: block;
+    position: relative;
+    width: 100%;
+    // height: auto;
+}
+
+div p {
+    // background-color: rgba(255, 255, 255, .8);
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    padding: 5px;
+    width: 100%;
+}
+
+.centrado {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $ligth;
+}
+
+.top-text {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $ligth;
+}
+
+.bottom-left-text {
+    position: absolute;
+    top: 85%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    color: $ligth;
+}
