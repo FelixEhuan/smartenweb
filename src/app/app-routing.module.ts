@@ -1,3 +1,4 @@
+import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { ConsumoComponent } from './pages/consumo/consumo.component';
@@ -7,7 +8,7 @@ import { AhorroComponent } from './pages/ahorro/ahorro.component';
 import { GraficasComponent } from './pages/graficas/graficas.component';
 import { SoporteComponent } from './pages/soporte/soporte.component';
 
-const APP_ROUTES: Routes = [
+const routes: Routes = [
   { path: 'Inicio', component: HomeComponent },
   { path: 'Consumo', component: ConsumoComponent },
   { path: 'Generado', component: ConsumoComponent },
@@ -18,4 +19,8 @@ const APP_ROUTES: Routes = [
   { path: '**', pathMatch: 'full', redirectTo: 'Inicio' }
 ];
 
-export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES);
+@NgModule({
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  exports: [RouterModule]
+})
+export class AppRoutingModule {}

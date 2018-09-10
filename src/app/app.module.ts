@@ -7,7 +7,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ConsumoComponent } from './pages/consumo/consumo.component';
 import { GeneradoComponent } from './pages/generado/generado.component';
-import { APP_ROUTING } from './app.routes';
+import { AppRoutingModule } from './app-routing.module';
 import { AhorroComponent } from './pages/ahorro/ahorro.component';
 import { GraficasComponent } from './pages/graficas/graficas.component';
 import { SoporteComponent } from './pages/soporte/soporte.component';
@@ -28,7 +28,7 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    APP_ROUTING,
+    AppRoutingModule,
     ChartsModule,
     NgbModule,
     FormsModule
