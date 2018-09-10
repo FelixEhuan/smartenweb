@@ -1,28 +1,28 @@
-<nav class="navbar navbar-expand-lg ">
-    <a class="navbar-brand" routerLinkActive="active" [routerLink]="['Inicio']"> <img src="../assets/panel.png" alt="" height="50"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+<nav class="navbar navbar-expand-sm ">
+    <a class="navbar-brand" routerLinkActive="active" [routerLink]="['Inicio']"> <img src="assets/panel.png" alt="" height="50"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-label="Toggle navigation">
+        <i class="icon ion-ios-menu"> </i> 
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent1" [ngbCollapse]="isCollapsed">
         <ul class="navbar-nav mr-auto">
             <li routerLinkActive="active" class="nav-item">
-                <a class="nav-link" [routerLink]="['Inicio']">Inicio <span class="sr-only">(current)</span></a>
+                <a class="nav-link" [routerLink]="['Inicio']" (click)="isCollapsed = true">Inicio </a>
             </li>
             <li routerLinkActive="active" class="nav-item">
-                <a class="nav-link" [routerLink]="['Consumo']">Consumo <span class="sr-only">(current)</span></a>
+                <a class="nav-link" [routerLink]="['Consumo']" (click)="isCollapsed = true">Consumo </a>
             </li>
             <li routerLinkActive="active" class="nav-item">
-                <a class="nav-link" [routerLink]="['Generado']">Generado</a>
+                <a class="nav-link" [routerLink]="['Generado']" (click)="isCollapsed = true">Generado</a>
             </li>
             <li routerLinkActive="active" class="nav-item">
-                <a class="nav-link" [routerLink]="['Ahorro']">Ahorro</a>
+                <a class="nav-link" [routerLink]="['Ahorro']" (click)="isCollapsed = true">Ahorro</a>
             </li>
             <li routerLinkActive="active" class="nav-item">
-                <a class="nav-link" [routerLink]="['Graficas']">Gráficas</a>
+                <a class="nav-link" [routerLink]="['Graficas']" (click)="isCollapsed = true">Gráficas</a>
             </li>
             <li routerLinkActive="active" class="nav-item">
-                <a class="nav-link" [routerLink]="['Soporte']">Soporte</a>
+                <a class="nav-link" [routerLink]="['Soporte']" (click)="isCollapsed = true">Soporte</a>
             </li>
         </ul>
         <div class="ml-auto">
