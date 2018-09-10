@@ -1,6 +1,6 @@
 <div class="d-flex justify-content-center" style="padding-top: 20px;">
-    <button class="btn  btn-lg" [class.btn-primary-smart]="potencia == true" (click)="randomize()" style="width:250px" [class.btn-outline-primary-smart]="potencia ==  false">Potencia </button>
-    <button class="btn  btn-lg" [class.btn-primary-smart]="potencia == false" (click)="randomize2()" style="width:250px" [class.btn-outline-primary-smart]="potencia == true">Energía</button>
+    <button class="btn  btn-lg responsive-device" [class.btn-primary-smart]="potencia == true" (click)="randomize()" [class.btn-outline-primary-smart]="potencia ==  false">Potencia </button>
+    <button class="btn  btn-lg responsive-device" [class.btn-primary-smart]="potencia == false" (click)="randomize2()" [class.btn-outline-primary-smart]="potencia == true">Energía</button>
 </div>
 <div [ngSwitch]="potencia">
     <div *ngSwitchCase="true">

@@ -1,0 +1,11 @@
+.responsive-device {
+    width: 150px;
+    padding-left: 20px!important;
+    border-radius: 0%;
+}
+
+@media (min-width: 992px) {
+    .responsive-device {
+        width: 250px;
+    }
+}

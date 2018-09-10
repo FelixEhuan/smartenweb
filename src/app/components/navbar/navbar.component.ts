@@ -7,6 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent  {
 
-  isCollapsed = false;
+  isCollapsed = true;
   constructor() { }
 }

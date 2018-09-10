@@ -7,16 +7,15 @@ img {
     // height: auto;
 }
 
-div p {
-    // background-color: rgba(255, 255, 255, .8);
-    display: block;
-    position: absolute;
-    top: 100px;
-    left: 0;
-    padding: 5px;
-    width: 100%;
-}
-
+// div p {
+//     // background-color: rgba(255, 255, 255, .8);
+//     // display: block;
+//     position: absolute;
+//     top: 100px;
+//     left: 0;
+//     padding: 5px;
+//     width: 100%;
+// }
 .centrado {
     position: absolute;
     top: 50%;
@@ -35,8 +34,63 @@ div p {
 
 .bottom-left-text {
     position: absolute;
-    top: 85%;
-    left: 15%;
+    top: 75%;
+    left: 50%;
     transform: translate(-50%, -50%);
     color: $ligth;
 }
+
+.medium-devices {
+    display: block;
+}
+
+.large-devices {
+    display: none;
+}
+
+// @media (min-width: 576px) {
+//     .medium-devices {
+//         display: block;
+//     }
+//     .large-devices {
+//         display: none;
+//     }
+// }
+// Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) {
+//     .medium-devices {
+//         display: none;
+//     }
+//     .large-devices {
+//         display: block;
+//     }
+// }
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .medium-devices {
+        display: none;
+    }
+    .large-devices {
+        display: block;
+    }
+    .centrado {
+        top: 50%;
+    }
+    .top-text {
+        top: 15%;
+    }
+    .bottom-left-text {
+        top: 85%;
+        left: 15%;
+    }
+}
+
+// // Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {
+//     .medium-devices {
+//         display: none;
+//     }
+//     .large-devices {
+//         display: block;
+//     }
+// }

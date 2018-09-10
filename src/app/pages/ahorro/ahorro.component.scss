@@ -1,12 +1,19 @@
 @import '../../../styles.scss';
-button {
-    border-radius: 0%;
-}
-
 .ahorro {
     color: green;
 }
 
 .consumo {
     color: red;
+}
+
+.responsive-device {
+    width: 100px;
+    border-radius: 0%;
+}
+
+@media (min-width: 992px) {
+    .responsive-device {
+        width: 250px;
+    }
 }

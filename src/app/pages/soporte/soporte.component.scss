@@ -1,8 +1,29 @@
 @import '../../../styles.scss';
-.no-rounded {
+form h3 {
+    color: $primary-blue;
+}
+
+.responsive-device {
+    width: 150px;
     border-radius: 0%;
 }
 
-form h3 {
-    color: $primary-blue;
+.medium-buttons {
+    display: block!important;
+}
+
+.large-buttons {
+    display: none!important;
+}
+
+@media (min-width: 992px) {
+    .responsive-device {
+        width: 250px;
+    }
+    .medium-buttons {
+        display: none!important;
+    }
+    .large-buttons {
+        display: block!important;
+    }
 }

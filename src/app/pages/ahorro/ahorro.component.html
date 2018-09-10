@@ -2,25 +2,23 @@
 <br>
 
 <div class="d-flex justify-content-center">
-    <button class="btn  btn-lg" [class.btn-primary-smart]="tab=='dia'" (click)="tab ='dia'" style="width:250px" [class.btn-outline-primary-smart]="tab != 'dia'">Día </button>
-    <button class="btn  btn-lg" [class.btn-primary-smart]="tab=='mes'" (click)="tab ='mes'" style="width:250px" [class.btn-outline-primary-smart]="tab !='mes'">Mes</button>
-    <button class="btn  btn-lg" [class.btn-primary-smart]="tab=='año'" (click)="tab ='año'" style="width:250px" [class.btn-outline-primary-smart]="tab !='año'">Año</button>
+    <button class="btn  btn-lg responsive-device" [class.btn-primary-smart]="tab=='dia'" (click)="tab ='dia'" [class.btn-outline-primary-smart]="tab != 'dia'">Día </button>
+    <button class="btn  btn-lg responsive-device" [class.btn-primary-smart]="tab=='mes'" (click)="tab ='mes'" [class.btn-outline-primary-smart]="tab !='mes'">Mes</button>
+    <button class="btn  btn-lg responsive-device" [class.btn-primary-smart]="tab=='año'" (click)="tab ='año'" [class.btn-outline-primary-smart]="tab !='año'">Año</button>
 </div>
 <br>
 <br>
 <br>
 <div [ngSwitch]="tab">
     <div *ngSwitchCase="'dia'">
-        <div class="d-flex justify-content-center">
-            <div class="">
-                <div>
-                    <ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next" [displayMonths]="2"></ngb-datepicker>
-                </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-6 text-center">
+                <ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next" [displayMonths]="1"></ngb-datepicker>
                 <div style="padding-top: 10px;">
                     <h4> Día: {{model.day}}/{{model.month}}/{{model.year}}</h4>
                 </div>
             </div>
-            <div style="padding-left: 25px;">
+            <div class="col-md-12 col-lg-6 text-center">
                 <div class="table-responsive-md">
                     <table class="table table-borderless table-smarten">
                         <thead>
