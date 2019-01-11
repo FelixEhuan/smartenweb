@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-md-6">
             <div style="display: block;">
-                <canvas baseChart width="400" height="200" [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+                <canvas baseChart width="400" height="200" [colors]="lineChartColors" [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
             </div>
         </div>
         <div class="col-md-6" style="margin-bottom: 10px">
@@ -25,14 +25,13 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td scope="row">23</td>
-                            <td>2</td>
+                            <td scope="row">12.433</td>
+                            <td>9.859368</td>
 
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <button class="btn btn-outline-primary-smart" (click)="randomize()">CLICK</button>
         </div>
     </div>
 </div>
@@ -40,9 +39,8 @@
     <div class="row">
         <div class="col-md-6">
             <div style="display: block">
-                <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+                <canvas baseChart [datasets]="barChartData"  [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
             </div>
-            <button class="btn btn-outline-primary-smart" (click)="randomize2()">Update</button>
         </div>
         <div class="col-md-6" style="margin-bottom: 10px">
             <div class="col-md-12 table-responsive-md">
@@ -58,33 +56,32 @@
                     <tbody>
                         <tr>
                             <th scope="row">Día</th>
-                            <td>23</td>
-                            <td>2</td>
+                            <td>3.424672</td>
+                            <td>2.7157648</td>
                         </tr>
                         <tr>
                             <th scope="row">Semana</th>
-                            <td>23</td>
-                            <td>2</td>
+                            <td>24.461943</td>
+                            <td>19.39832</td>
                         </tr>
                         <tr>
                             <th scope="row">Mes</th>
-                            <td>23</td>
-                            <td>2</td>
+                            <td>102.74016</td>
+                            <td>85.99459</td>
                         </tr>
                         <tr>
                             <th scope="row">Año</th>
-                            <td>23</td>
-                            <td>2</td>
+                            <td>113.28859</td>
+                            <td>96.07889</td>
                         </tr>
                         <tr>
                             <th scope="row">Total</th>
-                            <td>23</td>
-                            <td>2</td>
+                            <td>113.28859</td>
+                            <td>96.07889</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <button class="btn btn-outline-primary-smart" (click)="randomize()">CLICK</button>
         </div>
     </div>
 </ng-template>

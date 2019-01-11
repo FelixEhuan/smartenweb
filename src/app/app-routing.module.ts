@@ -11,7 +11,7 @@ import { SoporteComponent } from './pages/soporte/soporte.component';
 const routes: Routes = [
   { path: 'Inicio', component: HomeComponent },
   { path: 'Consumo', component: ConsumoComponent },
-  { path: 'Generado', component: ConsumoComponent },
+  { path: 'Generado', component: GeneradoComponent },
   { path: 'Ahorro', component: AhorroComponent },
   { path: 'Graficas', component: GraficasComponent },
   { path: 'Soporte', component: SoporteComponent },

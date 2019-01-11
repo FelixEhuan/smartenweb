@@ -12,7 +12,7 @@ import { AhorroComponent } from './pages/ahorro/ahorro.component';
 import { GraficasComponent } from './pages/graficas/graficas.component';
 import { SoporteComponent } from './pages/soporte/soporte.component';
 import { ChartsModule } from 'ng2-charts';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgbModule, NgbDatepickerModule} from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
@@ -30,10 +30,12 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     ChartsModule,
-    NgbModule,
-    FormsModule
+    NgbModule.forRoot(),
+    FormsModule,
+    NgbDatepickerModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

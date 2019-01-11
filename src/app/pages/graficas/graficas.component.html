@@ -8,12 +8,12 @@
         <div class="d-flex justify-content-around flex-wrap">
             <div class="col-md-7">
                 <div style="display: block; padding-top: 20px;">
-                    <canvas baseChart width="400" height="200" [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+                    <canvas baseChart width="400" height="200" [datasets]="lineChartData" [labels]="lineChartLabels" [colors]="lineChartColors" [options]="lineChartOptions" [legend]="lineChartLegend" [chartType]="lineChartType"></canvas>
                 </div>
             </div>
             <div class="col-md-7">
                 <div style="display: block; padding-top: 20px;">
-                    <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+                    <canvas baseChart width="400" height="200" [datasets]="lineChartData2" [labels]="lineChartLabels2" [colors]="lineChartColors" [options]="lineChartOptions" [legend]="lineChartLegend" [chartType]="lineChartType"></canvas>
                 </div>
             </div>
         </div>
@@ -23,12 +23,12 @@
         <div class="d-flex justify-content-around flex-wrap">
             <div class="col-md-7">
                 <div style="display: block; padding-top: 20px;">
-                    <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+                    <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType"></canvas>
                 </div>
             </div>
             <div class="col-md-7">
                 <div style="display: block; padding-top: 20px;">
-                    <canvas baseChart width="400" height="200" [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+                    <canvas baseChart [datasets]="barChartData2" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType"></canvas>
                 </div>
             </div>
         </div>
@@ -38,12 +38,12 @@
 <!-- <div class="d-flex justify-content-around flex-wrap">
     <div class="col-md-7">
         <div style="display: block; padding-top: 20px;">
-            <canvas baseChart width="400" height="200" [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+            <canvas baseChart width="400" height="200" [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [legend]="lineChartLegend" [chartType]="lineChartType"></canvas>
         </div>
     </div>
     <div class="col-md-7">
         <div style="display: block; padding-top: 20px;">
-            <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+            <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType"></canvas>
         </div>
     </div>
 </div> -->

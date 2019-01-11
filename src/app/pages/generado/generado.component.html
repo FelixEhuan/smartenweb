@@ -1,3 +1,87 @@
-<p>
-  generado works!
-</p>
+<br>
+<div class="d-flex justify-content-center">
+    <button class="btn  btn-lg" [class.btn-primary-smart]="potencia == true" (click)="potencia = true;" style="width:250px" [class.btn-outline-primary-smart]="potencia !=  true">Potencia </button>
+    <button class="btn  btn-lg" [class.btn-primary-smart]="potencia == false" (click)="potencia = false;" style="width:250px" [class.btn-outline-primary-smart]="potencia != false">Energía</button>
+</div>
+<br>
+<br>
+<br>
+<div *ngIf="potencia == true else consumo">
+    <div class="row">
+        <div class="col-md-6">
+            <div style="display: block;">
+                <canvas baseChart width="400" height="200" [datasets]="lineChartData" [colors]="lineChartColors" [labels]="lineChartLabels" [options]="lineChartOptions" [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+            </div>
+        </div>
+        <div class="col-md-6" style="margin-bottom: 10px">
+            <div class="col-md-10 table-responsive-md">
+                <table class="table table-striped table-borderless table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">kWh</th>
+                            <th scope="col">$</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row">4.593</td>
+                            <td>3.6422</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #consumo>
+    <div class="row">
+        <div class="col-md-6">
+            <div style="display: block">
+                <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+            </div>
+        </div>
+        <div class="col-md-6" style="margin-bottom: 10px">
+            <div class="col-md-12 table-responsive-md">
+                <table class="table table-striped table-borderless">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">kWh</th>
+                            <th scope="col">$</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Día</th>
+                            <td>1.48945</td>
+                            <td>1.1811339</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Semana</th>
+                            <td>10.638928</td>
+                            <td>8.43667</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Mes</th>
+                            <td>44.6835</td>
+                            <td>35.434013</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Año</th>
+                            <td>49.762</td>
+                            <td>39.461266</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Total</th>
+                            <td>49.762</td>
+                            <td>39.461266</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</ng-template>
